@@ -1,14 +1,16 @@
 package com.ruoyi.system.mapper;
 
-import java.util.List;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.ruoyi.system.domain.SysConfig;
+
+import java.util.List;
 
 /**
  * 参数配置 数据层
  * 
  * @author ruoyi
  */
-public interface SysConfigMapper
+public interface SysConfigMapper extends BaseMapper<SysConfig>
 {
     /**
      * 查询参数配置信息

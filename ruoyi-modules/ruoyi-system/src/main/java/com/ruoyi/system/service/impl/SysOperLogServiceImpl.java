@@ -1,11 +1,13 @@
 package com.ruoyi.system.service.impl;
 
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ruoyi.system.api.domain.SysOperLog;
 import com.ruoyi.system.mapper.SysOperLogMapper;
 import com.ruoyi.system.service.ISysOperLogService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * 操作日志 服务层处理
@@ -13,7 +15,7 @@ import com.ruoyi.system.service.ISysOperLogService;
  * @author ruoyi
  */
 @Service
-public class SysOperLogServiceImpl implements ISysOperLogService
+public class SysOperLogServiceImpl extends ServiceImpl<SysOperLogMapper, SysOperLog> implements ISysOperLogService
 {
     @Autowired
     private SysOperLogMapper operLogMapper;

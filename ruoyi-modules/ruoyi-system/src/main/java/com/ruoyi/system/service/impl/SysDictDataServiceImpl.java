@@ -1,12 +1,14 @@
 package com.ruoyi.system.service.impl;
 
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ruoyi.common.security.utils.DictUtils;
 import com.ruoyi.system.api.domain.SysDictData;
 import com.ruoyi.system.mapper.SysDictDataMapper;
 import com.ruoyi.system.service.ISysDictDataService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * 字典 业务层处理
@@ -14,7 +16,7 @@ import com.ruoyi.system.service.ISysDictDataService;
  * @author ruoyi
  */
 @Service
-public class SysDictDataServiceImpl implements ISysDictDataService
+public class SysDictDataServiceImpl extends ServiceImpl<SysDictDataMapper, SysDictData> implements ISysDictDataService
 {
     @Autowired
     private SysDictDataMapper dictDataMapper;

@@ -1,11 +1,6 @@
 package com.ruoyi.system.service.impl;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.stream.Collectors;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ruoyi.common.core.constant.UserConstants;
 import com.ruoyi.common.core.exception.ServiceException;
 import com.ruoyi.common.core.text.Convert;
@@ -20,6 +15,13 @@ import com.ruoyi.system.domain.vo.TreeSelect;
 import com.ruoyi.system.mapper.SysDeptMapper;
 import com.ruoyi.system.mapper.SysRoleMapper;
 import com.ruoyi.system.service.ISysDeptService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 部门管理 服务实现
@@ -27,7 +29,7 @@ import com.ruoyi.system.service.ISysDeptService;
  * @author ruoyi
  */
 @Service
-public class SysDeptServiceImpl implements ISysDeptService
+public class SysDeptServiceImpl extends ServiceImpl<SysDeptMapper, SysDept> implements ISysDeptService
 {
     @Autowired
     private SysDeptMapper deptMapper;

@@ -1,25 +1,30 @@
 package com.ruoyi.system.domain;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.ruoyi.common.core.annotation.Excel;
 import com.ruoyi.common.core.annotation.Excel.ColumnType;
 import com.ruoyi.common.core.web.domain.BaseEntity;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * 岗位表 sys_post
  * 
  * @author ruoyi
  */
+@TableName("sys_post")
 public class SysPost extends BaseEntity
 {
     private static final long serialVersionUID = 1L;
 
     /** 岗位序号 */
     @Excel(name = "岗位序号", cellType = ColumnType.NUMERIC)
+    @TableId
     private Long postId;
 
     /** 岗位编码 */
