@@ -58,6 +58,12 @@
         <dependency>
             <groupId>com.ruoyi</groupId>
             <artifactId>ruoyi-common-datasource</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.baomidou</groupId>
+                    <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         
         <!-- RuoYi Common DataScope -->
