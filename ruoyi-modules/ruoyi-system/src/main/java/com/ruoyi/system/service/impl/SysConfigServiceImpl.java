@@ -1,6 +1,5 @@
 package com.ruoyi.system.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ruoyi.common.core.constant.CacheConstants;
 import com.ruoyi.common.core.constant.UserConstants;
@@ -20,7 +19,7 @@ import java.util.List;
 
 /**
  * 参数配置 服务层实现
- * 
+ *    drivers_license
  * @author ruoyi
  */
 @Service

@@ -23,6 +23,7 @@ spring:
         # 共享配置
         shared-configs:
           - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+        namespace: bb2b8858-ad56-4340-a460-06b7c1b214e7
     sentinel:
       # 取消控制台懒加载
       eager: true
